@@ -55,13 +55,14 @@
             </ul>
         </nav>
     </header>
- <!-- search bar -->
+    <!-- search bar -->
     <div class="input-group input-group-lg">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-lg">search all housing ...</span>
+            <span class="input-group-text" id="inputGroup-sizing-lg">search all housing ...</span>
         </div>
-        <input type="text" class="form-control" aria-label="search all housing ... " aria-describedby="inputGroup-sizing-sm">
-      </div>
+        <input type="text" class="form-control" aria-label="search all housing ... "
+            aria-describedby="inputGroup-sizing-sm">
+    </div>
 
     <!-- Filter Options -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -115,46 +116,48 @@
             </form>
         </div>
     </nav>
-</div>
+    </div>
 
 
-<script>
-    var list = document.createElement('card');
-    mydata.forEach((mydata, index, array) => {
-        console.log(mydata.title);
+    <script>
+        var list = document.createElement('card');
+        mydata.forEach((mydata, index, array) => {
+            console.log(mydata.title);
 
-        var div = document.createElement("div");
+            var div = document.createElement("div");
 
-        div.className = "card";
-        div.style = "width: 18rem;";
+            div.className = "card";
+            div.style = "width: 18rem;";
 
 
-        div.innerHTML = ' <style="width: 18rem;"> <div class="card-body"><h5 class="card-title" > <div style="background-image: url('
-            + mydata.img_link + '); background-size: cover; background-position: center; width: 160px; height: 90px; border-radius: 5px"></div>'
-            + mydata.price + '</h5 > <h6 class="card-subtitle mb-2 text-muted">'
-            + mydata.title + '</h6><p class="card-text">District: '
-            + mydata.hood + '</p><a href="#" class="card-link">found on: Craiglist</a></div > </div > ';
+            div.innerHTML = ' <style="width: 18rem;"> <div class="card-body"><h5 class="card-title" > <div style="background-image: url('
+                + mydata.img_link + '); background-size: cover; background-position: center; width: 160px; height: 90px; border-radius: 5px"></div>'
+                + mydata.price + ' € </h5 > <h6 class="card-subtitle mb-2 text-muted">'
+                + mydata.title + '</h6> <p class="card-text">Location: '
+                + mydata.hood + '</p><p class="card-text">Rooms: '
+                + mydata.rooms + '</p><a href="#" class="card-link">found on: Craiglist</a></div > </div > ';
 
             document.body.appendChild(div);
 
-    });
+        });
 
-    // Inject into the DOM
-    var app = document.querySelector('.card'); /// Target class 
-    app.appendChild(list);
+        // Inject into the DOM
+        var app = document.querySelector('.card'); /// Target class 
+        app.appendChild(list);
 
-</script>git
+    </script>
 
 
 </body>
 
-      <!-- function appendData(data) {
+<!-- function appendData(data) {
         var mainContainer = document.getElementById("myData");
         for (var i = 0; i < data.length; i++) {
           var div = document.createElement("div");
           div.innerHTML = "Name: " + data[i].firstName + " " + data[i].lastName;
           mainContainer.appendChild(div);
         } -->
-    </script>
-  </body>
+</script>
+</body>
+
 </html>
