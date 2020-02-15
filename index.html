@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>housingpage</title>
+    <title>Craigslist</title>
+    <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="theme.css">
     <!-- Required meta tags -->
@@ -39,27 +40,23 @@
         src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
 
     </script>
-    CL</h1>
-    <nav>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Immobilien</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Community</a></li>
-    </nav>
-
-
 </head>
 
-<div class="sticky-top">
-    <div class="input-group input-group-lg">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-lg">Search all Housing...</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Large" placeholder="e.g. Kreuzberg"
-            aria-describedby="inputGroup-sizing-sm">
+<body>
+    <!-- Main Navigation -->
+    <header>
+        <nav class="main-navigation">
+            <h1>CL</h1>
+            <ul class="main-navigation-ul">
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Immobilien</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    </div>
-
+    <!-- Filter Options -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Filter</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -152,4 +149,13 @@
 
 </body>
 
+      <!-- function appendData(data) {
+        var mainContainer = document.getElementById("myData");
+        for (var i = 0; i < data.length; i++) {
+          var div = document.createElement("div");
+          div.innerHTML = "Name: " + data[i].firstName + " " + data[i].lastName;
+          mainContainer.appendChild(div);
+        } -->
+    </script>
+  </body>
 </html>

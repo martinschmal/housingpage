@@ -1,0 +1,31 @@
+/* Style Nav Bar */
+body {
+  padding: 35px;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.main-navigation-ul {
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+}
+
+.main-navigation li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.card {
+  position: relative;
+  display: inline-flex !important;
+  flex-direction: column;
+  padding: 10px;
+}
