@@ -35,8 +35,11 @@ h1 {
   font-family: "Kanit", sans-serif;
 }
 
-.main-navigation li:active {
-  color: rgba(49, 42, 52, 0.7);
+.main-navigation a {
+  color: #6a5671;
+}
+
+.main-navigation a:hover {
 }
 
 .card {
