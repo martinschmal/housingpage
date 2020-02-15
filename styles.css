@@ -40,6 +40,8 @@ h1 {
 }
 
 .main-navigation a:hover {
+  text-decoration: none;
+  color: #c29ccf;
 }
 
 .card {
