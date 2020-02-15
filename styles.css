@@ -27,5 +27,6 @@ body {
   position: relative;
   display: inline-flex !important;
   flex-direction: column;
+  
   padding: 10px;
 }
