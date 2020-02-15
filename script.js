@@ -983,3 +983,14 @@ var mydata = [
     hood: " (Germany berlin Friedrichshain)"
   }
 ];
+
+// Toggle between adding and removing the "responive" class to hamburger-menu when the user clicks the icon
+// function hamburgerMenu() {
+//   let x = document.getElementById("topNav");
+
+//   if (x.className === "hamburger-menu") {
+//     x.className += " responsive";
+//   } else {
+//     x.className = "hamburger-menu";
+//   }
+// }
