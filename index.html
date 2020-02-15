@@ -98,6 +98,20 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        rooms
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">1 </a>
+                        <a class="dropdown-item" href="#">2 </a>
+                        <a class="dropdown-item" href="#">3 </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">custom</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         size m²
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -108,6 +122,23 @@
                         <a class="dropdown-item" href="#">custom</a>
                     </div>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        date
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">today </a>
+                        <a class="dropdown-item" href="#">yesterday</a>
+                        <a class="dropdown-item" href="#">this week </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">custom</a>
+                    </div>
+                </li>
+
+
+
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -120,6 +151,10 @@
 
 
     <script>
+
+        const NOW = new Date()
+        const times = [["second", 1], ["minute", 60], ["hour", 3600], ["day", 86400], ["week", 604800], ["month", 2592000], ["year", 31536000]]
+
         var list = document.createElement('card');
         mydata.forEach((mydata, index, array) => {
             console.log(mydata.title);
@@ -135,7 +170,7 @@
                 + mydata.price + ' € </h5 > <h6 class="card-subtitle mb-2 text-muted">'
                 + mydata.title + '</h6> <p class="card-text">Location: '
                 + mydata.hood + '</p><p class="card-text">Rooms: '
-                + mydata.rooms + '</p><a href="#" class="card-link">found on: Craiglist</a></div > </div > ';
+                + mydata.rooms + '</p>' + 'published on ' + mydata.date;
 
             document.body.appendChild(div);
 
@@ -144,6 +179,7 @@
         // Inject into the DOM
         var app = document.querySelector('.card'); /// Target class 
         app.appendChild(list);
+
 
     </script>
 
