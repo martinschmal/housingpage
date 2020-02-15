@@ -46,7 +46,7 @@
     <!-- Main Navigation -->
     <header>
         <nav class="main-navigation">
-            <h1>CL</h1>
+            <h1>housing page</h1>
             <ul class="main-navigation-ul">
                 <li><a href="#">Jobs</a></li>
                 <li><a href="#">Immobilien</a></li>
@@ -55,6 +55,13 @@
             </ul>
         </nav>
     </header>
+ <!-- search bar -->
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">search all housing ...</span>
+        </div>
+        <input type="text" class="form-control" aria-label="search all housing ... " aria-describedby="inputGroup-sizing-sm">
+      </div>
 
     <!-- Filter Options -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -110,15 +117,6 @@
     </nav>
 </div>
 
-<!-- <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div> -->
-
 
 <script>
     var list = document.createElement('card');
@@ -131,7 +129,7 @@
         div.style = "width: 18rem;";
 
 
-        div.innerHTML = ' <div class="card" style="width: 18rem;"> <div class="card-body"><h5 class="card-title" > '
+        div.innerHTML = ' <style="width: 18rem;"> <div class="card-body"><h5 class="card-title" > '
             + mydata.price + '</h5 > <h6 class="card-subtitle mb-2 text-muted">'
             + mydata.title + '</h6><p class="card-text">District: '
             + mydata.hood + '</p><a href="#" class="card-link">found on: Craiglist</a></div > </div > ';
