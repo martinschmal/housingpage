@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JSON Test</title>
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
+  <body>
+    <div class="topnav" id="myTopNav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Housing</a>
+      <a href="#">Jobs</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+        ><i class="hamburger-bars"></i
+      ></a>
+    </div>
     <div id="myData"></div>
     <script>
-        fetch('people.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                appendData(data);
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
+      fetch("people.json")
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          appendData(data);
+        })
+        .catch(function(err) {
+          console.log("error: " + err);
+        });
 
-        function appendData(data) {
-            var mainContainer = document.getElementById("myData");
-            for (var i = 0; i < data.length; i++) {
-                var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
-                mainContainer.appendChild(div);
-            }
+      function appendData(data) {
+        var mainContainer = document.getElementById("myData");
+        for (var i = 0; i < data.length; i++) {
+          var div = document.createElement("div");
+          div.innerHTML = "Name: " + data[i].firstName + " " + data[i].lastName;
+          mainContainer.appendChild(div);
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>
