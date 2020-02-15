@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>housingpage</title>
     <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="theme.css">
     <!-- Required meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -37,16 +39,26 @@
         src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
 
     </script>
-    <h1>CL</h1>
+    CL</h1>
     <nav>
         <li><a href="#">Jobs</a></li>
         <li><a href="#">Immobilien</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Community</a></li>
     </nav>
+
+
 </head>
 
-<body>
+<div class="sticky-top">
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Search all Housing...</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Large" placeholder="e.g. Kreuzberg"
+            aria-describedby="inputGroup-sizing-sm">
+
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Filter</a>
@@ -91,18 +103,17 @@
                         <a class="dropdown-item" href="#">custom</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">..more filter</button>
             </form>
         </div>
     </nav>
+</div>
 
-    <!-- <div class="card" style="width: 18rem;">
+<!-- <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -112,50 +123,33 @@
       </div> -->
 
 
-    <script>
-        var list = document.createElement('card');
-        mydata.forEach((mydata, index, array) => {
-            console.log(mydata.title);
+<script>
+    var list = document.createElement('card');
+    mydata.forEach((mydata, index, array) => {
+        console.log(mydata.title);
 
-            var div = document.createElement("div");
+        var div = document.createElement("div");
 
-            div.className = "card";
-            div.style = "width: 18rem;";
+        div.className = "card";
+        div.style = "width: 18rem;";
 
-            //s div.innerHTML = '" <h2> "' + mydata.title + '"</h2> The hood is <h3>' +mydata.hood '"</h3> and the the price is <h1>"' + mydata.price '"</h1>"';
 
-            div.innerHTML = '<div class="header"><div style="background-image: url('
-                + mydata.title + '); background-size: cover; background-position: center; width: 90px; height: 90px; border-radius: 5px"></div>'
-                + "<h5>Price: " + mydata.hood + '</h5><p><h5>District<h5></a><p>' + mydata.title
-                + '<h6>' + mydata.price + '</h6>'
-            //div.innerHTML = mydata.title + 'hood' +mydata.price + 'is the price'
-
-            // div.div.className = "card-body";
-            // div.innerHTML = mydata.price;
-            // div.innerHTML = mydata.hood;
-            // div.innerHTML = mydata.link;
+        div.innerHTML = ' <div class="card" style="width: 18rem;"> <div class="card-body"><h5 class="card-title" > '
+            + mydata.price + '</h5 > <h6 class="card-subtitle mb-2 text-muted">'
+            + mydata.title + '</h6><p class="card-text">District: '
+            + mydata.hood + '</p><a href="#" class="card-link">found on: Craiglist</a></div > </div > ';
 
             document.body.appendChild(div);
 
-        });
+    });
 
-        // Inject into the DOM
-        var app = document.querySelector('.card'); /// Target class 
-        app.appendChild(list);
+    // Inject into the DOM
+    var app = document.querySelector('.card'); /// Target class 
+    app.appendChild(list);
 
-    </script>
+</script>
 
 
 </body>
 
-      function appendData(data) {
-        var mainContainer = document.getElementById("myData");
-        for (var i = 0; i < data.length; i++) {
-          var div = document.createElement("div");
-          div.innerHTML = "Name: " + data[i].firstName + " " + data[i].lastName;
-          mainContainer.appendChild(div);
-        }
-      }
-    </script>
-  </body>
 </html>

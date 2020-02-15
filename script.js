@@ -1,4 +1,4 @@
-var test = "Hello Word";
+
 
 var mydata = [
   {
